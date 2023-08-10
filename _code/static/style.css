@@ -1,0 +1,115 @@
+table, th, td {
+	border: 1px solid;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+article
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+nav
+{
+}
+
+aside
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.size_screen
+{
+	width: 70%;
+}
+
+@media only screen and (max-width: 1023px)
+{
+	aside, nav, article
+	{
+		width: 95%;
+	}
+}
+@media only screen and (min-width: 1024px)
+{
+	aside, nav, article
+	{
+		width: 70%;
+	}
+}
+
+table{
+	width: 100%;
+}
+
+th{
+	width: 60%;
+}
+
+td{
+	width: 40%;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li{
+	width: 20%;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+.selection
+{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.link_selection
+{
+	width: 30%;
+}
+
+.box_center
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+}

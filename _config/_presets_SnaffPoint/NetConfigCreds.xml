@@ -1,0 +1,9 @@
+<SearchPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>NetConfigCreds</Name>
+  <Request>
+    <QueryText>OR("snmp-server community")</QueryText>
+    <EnableFql>true</EnableFql>
+    <RefinementFilters>not(filetype:or("bmp","eps","gif","ico","jfi","jfif","jif","jpe","jpeg","jpg","png","psd","svg","tif","tiff","webp","xcf","ttf","otf","lock","css","less","aspx","eml","csv","xlsm","xslx","xls","pdf","pptx","docx","msg","doc"))</RefinementFilters>
+    <SortList>LastModifiedTime:descending,Rank:descending</SortList>
+  </Request>
+</SearchPreset>

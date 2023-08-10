@@ -1,0 +1,17 @@
+_data/*
+_config/_creds/*
+_config/excluded_sites.txt
+_config/excluded_hits.txt
+_config/targeted_sharepoint.txt
+_config/path_snaffler_binary.txt
+_config/specific_regex.txt
+_config/dict_score.json
+_config/specific_regex.txt
+_logs/*
+_tickets/*
+_results/*
+_result_history/*
+_downloaded_files_from_sharepoint/*
+_Snaffler/*
+*.pyc
+

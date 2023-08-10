@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>SnaffTrooper</title>
+    <link href="./static/style.css" rel="stylesheet">
+</head>
+
+<body>
+<h1>{{message}}</h1>
+<nav>
+    <ul class="selection">
+        <div class="box_center">
+            <li class="link_selection"><a href="./">Index</a></li>
+            <li class="link_selection"><a href="./ManualEvaluation">Check ticket</a></li>
+            <li class="link_selection"><a href="./saveCSV">CSV:{{csv_status}}</a></li>
+        </div>
+    </ul>
+</nav>
+
+<aside>
+    <table>
+    <thead>
+        <tr>
+            <th colspan="2">Current session</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>nb_hit_to_study</td>
+            <td>{{ nb_hit_to_study }}</td>
+        </tr>
+        <tr>
+            <td>current_ticket_id</td>
+            <td>{{ current_ticket }}</td>
+        </tr>
+        
+    </tbody>
+</table>
+</aside>
+<article>
+<table>
+    <h1>Info</h1>
+    <thead>
+        <tr>
+            <th colspan="2">Hit content</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for k, v in info_current_hit.items() %}
+        <tr>
+            <td>{{ k }}</td>
+            <td>{{ v }}</td>
+        </tr>
+        {% endfor %}
+        
+    </tbody>
+</table>
+</article>
+<aside>
+    <table>
+    <thead>
+        <tr>
+            <th colspan="2">Accès fichier</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Lien</td>
+            <td><a href="{{ filepath }}">{{ filepath }}</a></td>
+        </tr>
+        
+    </tbody>
+</table>
+</aside>
+<aside>
+
+    <ul class="selection">
+        <div class="box_center">
+            <li class="link_selection"><a href="./No">False positive</a></li>
+            <li class="link_selection"><a href="./Maybe">Maybe false positive</a></li>
+            <li class="link_selection"><a href="./Yes">True positive</a></li>
+        </div>
+    </ul>
+
+    <ul class="selection">
+        <div class="box_center">
+            <li class="link_selection"><a href="./Previous">Previous</a></li>
+            <li class="link_selection"><a href="./Next">Next</a></li>
+        </div>
+    </ul>
+</aside>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<SearchPreset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>CSharpDbConnStrings_NO-ON-PREM</Name>
+  <Request>
+    <QueryText>NEAR("data source", "password", n=30)</QueryText>
+    <EnableFql>true</EnableFql>
+    <RefinementFilters>filetype:or("aspx")</RefinementFilters>
+    <SortList>LastModifiedTime:descending,Rank:descending</SortList>
+  </Request>
+</SearchPreset>

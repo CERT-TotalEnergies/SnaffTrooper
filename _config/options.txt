@@ -1,0 +1,90 @@
+# author : Antoine G.
+# Naming convention -> <script> - <OPTION NAME> = <value>
+
+#------------------------------------------
+# for --tickets : only create ticket for hit with manual validation.
+main - OnlyManual = 0
+
+# 1 to get public IP of scanner and save it.
+main - SavePublicIp = 0
+
+# 0 to use SharePoint API, 1 to use GRAPH API.
+# WARNING: study_sharepoint_url_with_graph.py needs to be refactored.
+main - UseGraphOrSharePoint = 0
+
+# 1 to continue if Snaffler binary is not available.
+main - ByPassSnafflerAllowed = 1
+#------------------------------------------
+# size of context to save in result file.
+addRegex - TotalSizeContext = 2000
+
+# size of context before and after each regex hit to save in result file.
+addRegex - SizeContextRegex = 250
+#------------------------------------------
+# 1 to review all history files (0 is faster).
+archiveResults - REVIEW_ALL = 1
+
+# 1 to enable more verbose logs for this function.
+archiveResults - VERBOSE_LOG = 0
+#------------------------------------------
+# 1 to remove API tokens at the end.
+clean - CLEAN_TOKEN = 0
+
+# 1 to save content of "_data" folder in "_data/<date>_data_<id>".
+clean - STORE_DATA = 1
+#------------------------------------------
+# user agent to be sent in API token request.
+getToken - USERAGENT = Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+#------------------------------------------
+# 1 to save NTLM credentials for SharePoint on premise in "_config/_creds".
+getTokenOnPremise - SaveNTLMCreds = 0
+#------------------------------------------
+# 1 to allow operator interaction for authentication (API tokens). If set to 0, please manually provide tokens in "_data".
+helperSharePoint - INTERACTIVE = 1
+#------------------------------------------
+# 1 to enable more verbose logs for this function
+initContext - VERBOSITY = 0
+
+# 1 to save targeted SharePoint in "_config/targeted_sharepoint.txt". If set to 0, operator interaction will be requested.
+initContext - SaveTargetedSharepoint = 1
+
+# 1 to save the Snaffler binary path in "_config/path_snaffler_binary.txt". If set to 0, operator interaction will be requested.
+initContext - SaveSnafflerBinaryPath = 1
+#------------------------------------------
+# IP to use for --manual_processing WEB application.
+manualProcessing - IP = 127.0.0.1
+
+# port to use for --manual_processing WEB application.
+manualProcessing - PORT = 5000
+#------------------------------------------
+# number of different user with hit(s) on the same site to create SITE ticket
+prepareTickets - LimitToNotifySite = 5
+
+# 1 to enable more verbose logs for this function
+prepareTickets - VERBOSE_LOG = 0
+#------------------------------------------
+# folder path where Snaffler should search. If different than "./_downloaded_files_from_sharepoint", downloaded files will be copied.
+startSnaffler - ScanPathSnaffler = ./_downloaded_files_from_sharepoint
+
+# 1 to enable more verbose logs for this function (especially show Snaffler's output in terminal).
+startSnaffler - VERBOSE = 0
+#------------------------------------------
+# "NoSearch" for not looking for specific property.
+# "property" for looking for specific property. Result save in column "createdBy_dpt" of result file.
+studySharepointUrl - SpecificProperty = Department
+
+# maximum file size for download (SharePoint API).
+studySharepointUrl - MaxSizeForDownload = 5000000
+#------------------------------------------ Not available for now
+# maximum file size for download (GRAPH API).
+studySharepointUrlWithGraph - MaxSizeForDownload = 5000000
+
+# max url to dl - use to restore session
+studySharepointUrlWithGraph - MaxUrlToStudyAtOnce = 200
+
+# print debug information
+studySharepointUrlWithGraph - DEBUG = 0
+
+# 1 to not study file twice
+studySharepointUrlWithGraph - NoNewStudy = 1
+#------------------------------------------
