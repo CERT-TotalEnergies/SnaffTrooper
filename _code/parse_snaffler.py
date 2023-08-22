@@ -5,6 +5,7 @@
 import csv
 import os
 import helper
+import sys
 
 def import_snaffpoint_processed(filepath):
 	data = []
